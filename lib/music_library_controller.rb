@@ -23,17 +23,27 @@ class MusicLibraryController
         
         input = gets.strip
         list_songs if input == "list songs"
+<<<<<<< HEAD
         list_artists if input == "list artists"
         list_genres if input == "list genres"
         list_songs_by_artist if input == "list artist"
         list_songs_by_genre if input == "list genre"
         play_song if input == "play song"
+=======
+        list_artists if input == "list artists" || input == "list_songs_by_artist"
+        list_genres if input == "list genres"
+        #list_artist if input == "list_songs_by_artist"
+>>>>>>> 7aad821f8ac28c94443f1a70bc5b4035d79bd599
       end 
       
     end 
     
     def list_songs
       alphabetized_list = Song.all.sort{|a,b| a.name <=> b.name}.each_with_index{|file,index| puts "#{index +1}. #{file.artist.name} - #{file.name} - #{file.genre.name}"}
+<<<<<<< HEAD
+=======
+     # numbered_list = alphabetized_list.each_with_index{|file,index| puts "#{index +1}. #{file.artist.name} - #{file.name} - #{file.genre.name}"}
+>>>>>>> 7aad821f8ac28c94443f1a70bc5b4035d79bd599
     end 
     
     def list_artists 
@@ -45,6 +55,7 @@ class MusicLibraryController
     end 
     
     def list_songs_by_artist
+<<<<<<< HEAD
       puts "Please enter the name of an artist:"
       artist_name = gets.strip 
       if artist = Artist.find_by_name(artist_name)
@@ -71,4 +82,9 @@ class MusicLibraryController
       end 
     end 
     
+=======
+      puts ""
+    end 
+  
+>>>>>>> 7aad821f8ac28c94443f1a70bc5b4035d79bd599
 end 
